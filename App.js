@@ -1,25 +1,15 @@
 import { FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { IvapDrawer } from './components/sidebar/sidebar';
+
+const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <FontAwesome name="apple" size={25} />
-      <MaterialIcons name="star" color="blue" size={25} />
-      {/* Create a button */}
-      <FontAwesome.Button name="facebook" backgroundColor="#3b5998" onPress={() => {}}>
-        Login with Facebook
-      </FontAwesome.Button>
-    </View>
+    <NavigationContainer>
+      <IvapDrawer />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
