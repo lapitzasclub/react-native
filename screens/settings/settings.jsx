@@ -1,19 +1,17 @@
+import { styles } from '../../global-styles';
 import React from 'react';
 import { Text, View } from 'react-native';
 import { IvapHeader } from '../../components/header/header';
 
-export class SettingsScreen extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return (
-            <View>
-                <IvapHeader navigationProps={this.props.navigation} />
-                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                    <Text>AJUSTES</Text>
-                </View>
+export const SettingsScreen = (props) => {
+    return (
+        <View style={styles.bg}>
+            <IvapHeader navigationProps={props.navigation} />
+            <View style={styles.mainView}>
+                <Text style={styles.h2}>
+                    Ajustes
+                </Text>
             </View>
-        );
-    }
+        </View>
+    );
 }

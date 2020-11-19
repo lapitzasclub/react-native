@@ -1135,6 +1135,13 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
+"@react-native-community/async-storage@^1.12.1":
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/@react-native-community/async-storage/-/async-storage-1.12.1.tgz#25f821b4f6b13abe005ad67e47c6f1cee9f27b24"
+  integrity sha512-70WGaH3PKYASi4BThuEEKMkyAgE9k7VytBqmgPRx3MzJx9/MkspwqJGmn3QLCgHLIFUgF1pit2mWICbRJ3T3lg==
+  dependencies:
+    deep-assign "^3.0.0"
+
 "@react-native-community/cli-debugger-ui@^4.9.0":
   version "4.9.0"
   resolved "https://registry.yarnpkg.com/@react-native-community/cli-debugger-ui/-/cli-debugger-ui-4.9.0.tgz#4177764ba69243c97aa26829d59d9501acb2bd71"
@@ -1373,9 +1380,9 @@
     "@types/yargs-parser" "*"
 
 "@types/yargs@^15.0.0":
-  version "15.0.9"
-  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-15.0.9.tgz#524cd7998fe810cdb02f26101b699cccd156ff19"
-  integrity sha512-HmU8SeIRhZCWcnRskCs36Q1Q00KBV6Cqh/ora8WN1+22dY07AZdn6Gel8QZ3t26XYPImtcL8WV/eqjhVmMEw4g==
+  version "15.0.10"
+  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-15.0.10.tgz#0fe3c8173a0d5c3e780b389050140c3f5ea6ea74"
+  integrity sha512-z8PNtlhrj7eJNLmrAivM7rjBESG6JwC5xP3RVk12i/8HVP7Xnx/sEmERnRImyEuUaJfO942X0qMOYsoupaJbZQ==
   dependencies:
     "@types/yargs-parser" "*"
 
@@ -1888,9 +1895,9 @@ camelcase@^5.0.0, camelcase@^5.3.1:
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
 caniuse-lite@^1.0.30001157:
-  version "1.0.30001158"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001158.tgz#fce86d321369603c2bc855ee0e901a7f49f8310b"
-  integrity sha512-s5loVYY+yKpuVA3HyW8BarzrtJvwHReuzugQXlv1iR3LKSReoFXRm86mT6hT7PEF5RxW+XQZg+6nYjlywYzQ+g==
+  version "1.0.30001159"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001159.tgz#bebde28f893fa9594dadcaa7d6b8e2aa0299df20"
+  integrity sha512-w9Ph56jOsS8RL20K9cLND3u/+5WASWdhC/PPrf+V3/HsM3uHOavWOR1Xzakbv4Puo/srmPHudkmCRWM7Aq+/UA==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -2328,9 +2335,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.591:
-  version "1.3.597"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.597.tgz#0d30fd4c0f5437149c28a6044c4e119357ae56aa"
-  integrity sha512-VJI21MucKaqyFw0oe3j9BIg+nDF4MHzUZAmUwZzrxho+s8zPCD13Fds07Rgu+MTtAadO4tYTKFdAUksKYUyIJw==
+  version "1.3.601"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.601.tgz#881824eaef0b2f97c89e1abb5835fdd224997d34"
+  integrity sha512-ctRyXD9y0mZu8pgeNwBUhLP3Guyr5YuqkfLKYmpTwYx7o9JtCEJme9JVX4xBXPr5ZNvr/iBXUvHLFEVJQThATg==
 
 emoji-regex@^7.0.1:
   version "7.0.3"
@@ -2579,6 +2586,13 @@ expo-linking@~1.0.4:
     expo-constants "~9.2.0"
     qs "^6.5.0"
     url-parse "^1.4.4"
+
+expo-localization@~9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/expo-localization/-/expo-localization-9.0.0.tgz#1a61582f9ffb3cd28879a917dec347c444bff54e"
+  integrity sha512-jG84LA9yyQpLcSOKvR/WoIm0IHZ4tZQma//AJ9/DgBZC5zSB/aDbcjmCStQvqCePz8EMy1CKxRd+UlKYPLEiVw==
+  dependencies:
+    rtl-detect "^1.0.2"
 
 expo-location@~9.0.0:
   version "9.0.1"
@@ -3629,6 +3643,11 @@ leven@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/leven/-/leven-3.1.0.tgz#77891de834064cccba82ae7842bb6b14a13ed7f2"
   integrity sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==
+
+localized-strings@^0.2.0:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/localized-strings/-/localized-strings-0.2.4.tgz#9d61c06b60cc7b5edf7c46e6c7f2d1ecb84aeb2c"
+  integrity sha512-TKDhqFPkIIN/if2FSvVVZTaM/GP9TzfgdQ2uY65mr32xgFu5nqkKXprXbzy5rfx32DF5LDvS/y1UqYF/mAscYA==
 
 locate-path@^2.0.0:
   version "2.0.0"
@@ -4714,13 +4733,6 @@ range-parser@~1.2.1:
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.1.tgz#3cf37023d199e1c24d1a55b84800c2f3e6468031"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
 
-react-app-rewired@^2.1.6:
-  version "2.1.6"
-  resolved "https://registry.yarnpkg.com/react-app-rewired/-/react-app-rewired-2.1.6.tgz#33ee3076a7f34d6a7c94e649cac67e7c8c580de8"
-  integrity sha512-06flj0kK5tf/RN4naRv/sn6j3sQd7rsURoRLKLpffXDzJeNiAaTNic+0I8Basojy5WDwREkTqrMLewSAjcb13w==
-  dependencies:
-    semver "^5.6.0"
-
 react-devtools-core@^4.6.0:
   version "4.10.0"
   resolved "https://registry.yarnpkg.com/react-devtools-core/-/react-devtools-core-4.10.0.tgz#027ed231f851e5e9d697812bb905648ab822ec48"
@@ -4743,6 +4755,13 @@ react-is@^16.12.0, react-is@^16.13.0, react-is@^16.7.0, react-is@^16.8.1, react-
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-localization@^1.0.14:
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/react-localization/-/react-localization-1.0.15.tgz#624bd0b514100488a84204e20b398750313d1708"
+  integrity sha512-s+yK3EqPUhN8kAfUIoA5m0a0iGOvxB3DrvngYnSZNLRQRX+yS7LYfTuKT66KVa3Cr6EP4iGRtw4XRqpsi1ZLjw==
+  dependencies:
+    localized-strings "^0.2.0"
 
 react-native-elements@^3.0.0-alpha.1:
   version "3.0.0-alpha.1"
@@ -4775,6 +4794,18 @@ react-native-iphone-x-helper@^1.3.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.3.1.tgz#20c603e9a0e765fd6f97396638bdeb0e5a60b010"
   integrity sha512-HOf0jzRnq2/aFUcdCJ9w9JGzN3gdEg0zFE4FyYlp4jtidqU03D5X7ZegGKfT1EWteR0gPBGp9ye5T5FvSWi9Yg==
+
+react-native-localization@^2.1.6:
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/react-native-localization/-/react-native-localization-2.1.6.tgz#86d50a09d50495a5b9b789c3981acbd5cb0c38b7"
+  integrity sha512-L0ZKfN49TtZJoBJZ4M5Uh+d/q5GB0Vpbd/fmysfXljOAwZiy2h1ZlytTnbjElYp61FELZmvyXymlgt4kvVpx1A==
+  dependencies:
+    react-localization "^1.0.14"
+
+react-native-localize@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-localize/-/react-native-localize-2.0.0.tgz#79a2ed4a9981f94ce62db93e4e6a4b8f08fd1bdd"
+  integrity sha512-D2S4JZ+aQle7qpSG3pg3kpqETwbr2Ikz9LL7VcmACMm+dQd+TTKGU5+zQjqR88UQcxJTUssuCF7IgoZC2KgwFw==
 
 react-native-ratings@^7.3.0:
   version "7.3.0"
@@ -5051,6 +5082,11 @@ rsvp@^4.8.4:
   version "4.8.5"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
   integrity sha512-nfMOlASu9OnRJo1mbEk2cz0D56a1MBNrJ7orjRZQG10XDyuvwksKbuXNp6qa+kbn839HwjwhBzhFmdsaEAfauA==
+
+rtl-detect@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/rtl-detect/-/rtl-detect-1.0.2.tgz#8eca316f5c6563d54df4e406171dd7819adda67f"
+  integrity sha512-5X1422hvphzg2a/bo4tIDbjFjbJUOaPZwqE6dnyyxqwFqfR+tBcvfqapJr0o0VygATVCGKiODEewhZtKF+90AA==
 
 run-async@^2.2.0:
   version "2.4.1"

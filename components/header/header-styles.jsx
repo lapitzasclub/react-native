@@ -1,17 +1,20 @@
 import { StyleSheet } from "react-native";
 import { stylesVariables } from "../../global-styles";
 
-export const ivapHeader = StyleSheet.create({
+export const headerStyles = StyleSheet.create({
   menuButton: {
     color: "#fff",
-    paddingLeft: "10px"
-  },  
+    paddingLeft: 10
+  },
   notificationsButton: {
     color: "#fff",
-    paddingRight: "10px"
+    paddingRight: 10
   },
   container: {
-    backgroundColor: stylesVariables.color.background.ivap
+    backgroundColor: stylesVariables.color.background.ivap,
+    borderBottomColor: stylesVariables.color.background.ivap,
+    margin: 0,
+    height: 70
   },
   centerComponent: {
     color: "#fff"
