@@ -1,0 +1,16 @@
+{
+    "expo": {
+     "name": "ivap-app",
+     "icon": "./assets/images/icon.png",
+     "version": "0.0.1",
+     "slug": "ivap-app-slug",
+     "ios": {
+       "bundleIdentifier": "com.ejie",
+       "buildNumber": "0.0.1"
+     },
+     "android": {
+       "package": "com.ejie",
+       "versionCode": 1
+     }
+    }
+  }

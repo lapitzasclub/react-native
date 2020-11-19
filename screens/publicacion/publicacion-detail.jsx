@@ -2,7 +2,7 @@ import { styles } from '../../global-styles';
 import React from 'react';
 import { Text, View } from 'react-native';
 import { IvapHeader } from '../../components/header/header';
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import { ScrollView } from 'react-native-gesture-handler';
 import { Publicacion } from './publicacion.model';
 import { publicacionStyles } from './publicacion-styles';
 import { Card, Icon } from 'react-native-elements';
@@ -69,25 +69,19 @@ export class PublicacionScreen extends React.Component {
                 <IvapHeader navigationProps={this.props.navigation} />
                 <View style={styles.mainView} >
                     <ScrollView contentContainerStyle={styles.mainScrollView} >
-                        <Text style={styles.h2}>Publicaciones</Text>
+                        <Text style={styles.h2}>De</Text>
 
                         {this.state.publicacionList && this.state.publicacionList.length > 0 ? (
                             <View>
                                 {this.state.publicacionList.map((publicacion, i) => (
-                                    <Card containerStyle={publicacionStyles.card} key={i} key={i}>
-                                        <TouchableOpacity
-                                            onPress={() => this.props.navigation.navigate('SettingsScreen')}
-                                            style={publicacionStyles.touchable}>
-                                            <View style={{ flexDirection: "row" }}>
-                                                <View style={publicacionStyles.cardLeft}>
-                                                    <Text style={publicacionStyles.date}>{moment(publicacion.date).format('DD/MM/YYYY')}</Text>
-                                                    <Text style={publicacionStyles.title}>{publicacion.title}</Text>
-                                                </View>
-                                                <View style={publicacionStyles.cardRight}>
-                                                    <Icon name="chevron-right" size={35}></Icon>
-                                                </View>
-                                            </View>
-                                        </TouchableOpacity>
+                                    <Card containerStyle={publicacionStyles.card} key={i} wrapperStyle={{ flexDirection: "row" }} key={i}>
+                                        <View style={publicacionStyles.cardLeft}>
+                                            <Text style={publicacionStyles.date}>{moment(publicacion.date).format('DD/MM/YYYY')}</Text>
+                                            <Text style={publicacionStyles.title}>{publicacion.title}</Text>
+                                        </View>
+                                        <View style={publicacionStyles.cardRight}>
+                                            <Icon name="chevron-right" size={35}></Icon>
+                                        </View>
                                     </Card>
                                 ))}
                             </View>

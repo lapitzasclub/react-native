@@ -4,29 +4,32 @@ import { OfertaEmpleoScreen } from '../../screens/oferta-empleo/oferta-empleo';
 import { PublicacionScreen } from '../../screens/publicacion/publicacion';
 import { NotificacionScreen } from '../../screens/notificacion/notificacion';
 import { SettingsScreen } from '../../screens/settings/settings';
-import { ivapSidebar } from './sidebar-styles';
-import { Image, SafeAreaView, View, Platform } from 'react-native';
+import { sidebarStyles } from './sidebar-styles';
+import { Image, SafeAreaView, View, ImageBackground } from 'react-native';
 import { Icon } from 'react-native-elements';
 
 import logoIvap from '../../assets/images/logo-menu-ivap.png';
 import logoGV from '../../assets/images/logo-menu-GV.png';
 import logoEuskadi from '../../assets/images/logo-menu-euskadi.png';
+import splash from '../../assets/images/fondo-splash.png';
 
 const Drawer = createDrawerNavigator();
 
 const CustomSidebarMenu = (props) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Image source={logoIvap} style={ivapSidebar.logo} />
-      <DrawerContentScrollView {...props}>
-        <DrawerItemList {...props} />
-      </DrawerContentScrollView>
-      <View style={ivapSidebar.customItem}>
-        <Image source={logoEuskadi} style={ivapSidebar.euskadi} />
-      </View>
-      <View style={ivapSidebar.customItem}>
-        <Image source={logoGV} style={ivapSidebar.gv} />
-      </View>
+      <ImageBackground source={splash} style={sidebarStyles.bg}>
+        <Image source={logoIvap} style={sidebarStyles.logo} />
+        <DrawerContentScrollView {...props}>
+          <DrawerItemList {...props} />
+        </DrawerContentScrollView>
+        <View style={sidebarStyles.customItem}>
+          <Image source={logoEuskadi} style={sidebarStyles.euskadi} />
+        </View>
+        <View style={sidebarStyles.customItem}>
+          <Image source={logoGV} style={sidebarStyles.gv} />
+        </View>
+      </ImageBackground>
     </SafeAreaView>
   );
 };
@@ -40,12 +43,12 @@ export class IvapDrawer extends React.Component {
     return (
       <Drawer.Navigator
         initialRouteName="OfertaEmpleoScreen"
-        drawerStyle={ivapSidebar.container}
+        drawerStyle={sidebarStyles.container}
         drawerContent={(props) => <CustomSidebarMenu {...props} />}
         drawerContentOptions={{
           activeTintColor: '#FFF',
           inactiveTintColor: '#FFECF8',
-          itemStyle: ivapSidebar.item
+          itemStyle: sidebarStyles.item
         }}
       >
         <Drawer.Screen

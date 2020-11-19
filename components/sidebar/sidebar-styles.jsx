@@ -1,15 +1,18 @@
 import { StyleSheet } from "react-native";
 import { stylesVariables } from "../../global-styles";
 
-export const ivapSidebar = StyleSheet.create({
+export const sidebarStyles = StyleSheet.create({
   container: {
     backgroundColor: stylesVariables.color.background.ivap,
+  },
+  bg: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center"
   },
   item: {
     color: "#fff"
   },
-
-
   logo: {
     marginTop: 50,
     resizeMode: 'contain',

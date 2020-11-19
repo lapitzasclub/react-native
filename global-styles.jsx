@@ -31,10 +31,14 @@ export const styles = StyleSheet.create({
         backgroundColor: stylesVariables.color.background.ivap
     },
     mainView: {
+        flex: 1,
         backgroundColor: '#FFF',
         borderTopLeftRadius: 18,
         borderTopRightRadius: 18,
-        paddingVertical: 15
+    },
+    mainScrollView: {
+        paddingVertical: 15,
+        minWidth: '100%'
     }
 
 });

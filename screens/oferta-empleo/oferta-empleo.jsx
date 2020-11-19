@@ -6,8 +6,7 @@ import { IvapHeader } from '../../components/header/header';
 import { ofertaEmpleoStyles } from './oferta-empleo-styles';
 import { OfertaEmpleo } from './oferta-empleo.model';
 import { Link } from '@react-navigation/native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 
 export class OfertaEmpleoScreen extends React.Component {
     constructor(props) {
@@ -57,50 +56,63 @@ export class OfertaEmpleoScreen extends React.Component {
         return (
             <View style={styles.bg}>
                 <IvapHeader navigationProps={this.props.navigation} />
-                <ScrollView contentContainerStyle={styles.mainView} >
-                    <Text style={styles.h2}>Empleo público</Text>
+                <View style={styles.mainView} >
+                    <ScrollView contentContainerStyle={styles.mainScrollView} >
+                        <Text style={styles.h2}>Empleo público</Text>
 
-                    {this.state.ofertaEmpleoList && this.state.ofertaEmpleoList.length > 0 ? (
-                        <View>
-                            {this.state.ofertaEmpleoList.map((ofertaEmpleo, i) => (
-                                <Card containerStyle={ofertaEmpleoStyles.card} key={i}>
-                                    <Card.Title style={ofertaEmpleoStyles.title}>{ofertaEmpleo.title}</Card.Title>
-                                    <View style={ofertaEmpleoStyles.item}>
-                                        <Icon name="place" style={ofertaEmpleoStyles.itemIcon} color={stylesVariables.color.icon.default} />
-                                        <Link style={ofertaEmpleoStyles.link}>
-                                            {ofertaEmpleo.place}
-                                        </Link>
-                                    </View>
-                                    <View style={ofertaEmpleoStyles.item}>
-                                        <Icon name="people" style={ofertaEmpleoStyles.itemIcon} color={stylesVariables.color.icon.default} />
-                                        <Text>
-                                            Nº plazas: {ofertaEmpleo.slots}
-                                        </Text>
-                                    </View>
-                                    <View style={ofertaEmpleoStyles.item}>
-                                        <Icon name="work" style={ofertaEmpleoStyles.itemIcon} color={stylesVariables.color.icon.default} />
-                                        <Text>
-                                            Tipo de contrato: {ofertaEmpleo.contract}
-                                        </Text>
-                                    </View>
-                                    <View style={ofertaEmpleoStyles.item}>
-                                        <Icon name="today" style={ofertaEmpleoStyles.itemIcon} color={stylesVariables.color.icon.default} />
-                                        <Text>
-                                            {ofertaEmpleo.term}
-                                        </Text>
-                                    </View>
-                                </Card>
-                            ))}
-                        </View>
-                    ) : (
-                            !this.state.loading && (
-                                <div className="alert alert-warning">
-                                    No se han encontrado ofertas de empleo público
-                                </div>
+                        {this.state.ofertaEmpleoList && this.state.ofertaEmpleoList.length > 0 ? (
+                            <View>
+                                {this.state.ofertaEmpleoList.map((ofertaEmpleo, i) => (
+                                    <Card containerStyle={ofertaEmpleoStyles.card} key={i}>
+                                        <TouchableOpacity
+                                            onPress={() => this.props.navigation.navigate('SettingsScreen')}
+                                            style={ofertaEmpleoStyles.touchable}>
+                                            <View style={{ flexDirection: "row" }}>
+                                                <View style={ofertaEmpleoStyles.cardLeft}>
+                                                    <Card.Title style={ofertaEmpleoStyles.title}>{ofertaEmpleo.title}</Card.Title>
+                                                    <View style={ofertaEmpleoStyles.item}>
+                                                        <Icon name="place" style={ofertaEmpleoStyles.itemIcon} color={stylesVariables.color.icon.default} />
+                                                        <Link style={ofertaEmpleoStyles.itemLabel}>
+                                                            {ofertaEmpleo.place}
+                                                        </Link>
+                                                    </View>
+                                                    <View style={ofertaEmpleoStyles.item}>
+                                                        <Icon name="people" style={ofertaEmpleoStyles.itemIcon} color={stylesVariables.color.icon.default} />
+                                                        <Text style={ofertaEmpleoStyles.itemLabel}>
+                                                            Nº plazas: {ofertaEmpleo.slots}
+                                                        </Text>
+                                                    </View>
+                                                    <View style={ofertaEmpleoStyles.item}>
+                                                        <Icon name="work" style={ofertaEmpleoStyles.itemIcon} color={stylesVariables.color.icon.default} />
+                                                        <Text style={ofertaEmpleoStyles.itemLabel}>
+                                                            Tipo de contrato: {ofertaEmpleo.contract}
+                                                        </Text>
+                                                    </View>
+                                                    <View style={ofertaEmpleoStyles.item}>
+                                                        <Icon name="today" style={ofertaEmpleoStyles.itemIcon} color={stylesVariables.color.icon.default} />
+                                                        <Text style={ofertaEmpleoStyles.itemLabel}>
+                                                            {ofertaEmpleo.term}
+                                                        </Text>
+                                                    </View>
+                                                </View>
+                                                <View style={ofertaEmpleoStyles.cardRight}>
+                                                    <Icon name="chevron-right" size={35}></Icon>
+                                                </View>
+                                            </View>
+                                        </TouchableOpacity>
+                                    </Card>
+                                ))}
+                            </View>
+                        ) : (
+                                !this.state.loading && (
+                                    <Text>
+                                        No se han encontrado ofertas de empleo público
+                                    </Text>
+                                )
                             )
-                        )
-                    }
-                </ScrollView>
+                        }
+                    </ScrollView>
+                </View>
             </View >
         );
     }

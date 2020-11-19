@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { stylesVariables } from "../../global-styles";
 
-export const ofertaEmpleoStyles = StyleSheet.create({
+export const publicacionStyles = StyleSheet.create({
   card: {
     borderRadius: 20,
     shadowOffset: {
@@ -25,24 +25,14 @@ export const ofertaEmpleoStyles = StyleSheet.create({
     maxWidth: 25,
     justifyContent: 'center'
   },
-  title: {
-    color: stylesVariables.color.font.ivap,
-    fontSize: 20,
+  date: {
+    color: '#8E8E8E',
+    fontWeight: 'bold',
     textTransform: 'uppercase',
-    textAlign: "left"
+    textAlign: "left",
+    marginBottom: 10
   },
-  item: {
-    flexDirection: "row",
-    flexWrap: 'nowrap',
+  title: {
     color: stylesVariables.color.font.default,
-    marginBottom: 15,
-  },
-  itemIcon: {
-    flex: 1,
-    marginRight: 5
-  },
-  itemLabel: {
-    flex: 2,
-    marginRight: 5
-  },
+  }
 });
