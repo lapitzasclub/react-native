@@ -22,17 +22,18 @@ export const styles = StyleSheet.create({
     h2: {
         color: stylesVariables.color.font.default,
         fontSize: 25,
-        fontWeight: 600,
+        fontWeight: "600",
         textAlign: "left",
         margin: 15
     },
     bg: {
+        flex: 1,
         backgroundColor: stylesVariables.color.background.ivap
     },
     mainView: {
         backgroundColor: '#FFF',
-        borderTopLeftRadius: 25,
-        borderTopRightRadius: 25,
+        borderTopLeftRadius: 18,
+        borderTopRightRadius: 18,
         paddingVertical: 15
     }
 

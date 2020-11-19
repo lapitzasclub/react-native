@@ -21,10 +21,11 @@ export const ofertaEmpleoStyles = StyleSheet.create({
   item: {
     flex: 1,
     flexDirection: "row",
+    flexWrap: 'wrap',
     color: stylesVariables.color.font.default,
-    marginBottom: 15
+    marginBottom: 15,
   },
   itemIcon: {
     marginRight: 5
-  }
+  },
 });

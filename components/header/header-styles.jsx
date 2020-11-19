@@ -4,11 +4,11 @@ import { stylesVariables } from "../../global-styles";
 export const headerStyles = StyleSheet.create({
   menuButton: {
     color: "#fff",
-    paddingLeft: "10px"
-  },  
+    paddingLeft: 10
+  },
   notificationsButton: {
     color: "#fff",
-    paddingRight: "10px"
+    paddingRight: 10
   },
   container: {
     backgroundColor: stylesVariables.color.background.ivap,

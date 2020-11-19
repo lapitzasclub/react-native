@@ -11,22 +11,23 @@ export const ivapSidebar = StyleSheet.create({
 
 
   logo: {
-    resizeMode: 'center',
-    width: 200,
-    height: 200,
+    marginTop: 50,
+    resizeMode: 'contain',
+    width: 150,
+    height: 150,
     alignSelf: 'center',
   },
   euskadi: {
     width: 200,
     height: 20,
-    resizeMode: 'strech',
+    resizeMode: 'stretch',
     marginVertical: 20,
     marginHorizontal: 20
   },
   gv: {
     width: 200,
     height: 20,
-    resizeMode: 'strech',
+    resizeMode: 'stretch',
     marginVertical: 10,
     marginHorizontal: 20
   },

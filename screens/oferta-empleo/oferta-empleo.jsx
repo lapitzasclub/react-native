@@ -6,6 +6,8 @@ import { IvapHeader } from '../../components/header/header';
 import { ofertaEmpleoStyles } from './oferta-empleo-styles';
 import { OfertaEmpleo } from './oferta-empleo.model';
 import { Link } from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { ScrollView } from 'react-native-gesture-handler';
 
 export class OfertaEmpleoScreen extends React.Component {
     constructor(props) {
@@ -55,13 +57,13 @@ export class OfertaEmpleoScreen extends React.Component {
         return (
             <View style={styles.bg}>
                 <IvapHeader navigationProps={this.props.navigation} />
-                <View style={styles.mainView}>
+                <ScrollView contentContainerStyle={styles.mainView} >
                     <Text style={styles.h2}>Empleo público</Text>
 
                     {this.state.ofertaEmpleoList && this.state.ofertaEmpleoList.length > 0 ? (
-                        <View className="ofertas">
+                        <View>
                             {this.state.ofertaEmpleoList.map((ofertaEmpleo, i) => (
-                                <Card containerStyle={ofertaEmpleoStyles.card}>
+                                <Card containerStyle={ofertaEmpleoStyles.card} key={i}>
                                     <Card.Title style={ofertaEmpleoStyles.title}>{ofertaEmpleo.title}</Card.Title>
                                     <View style={ofertaEmpleoStyles.item}>
                                         <Icon name="place" style={ofertaEmpleoStyles.itemIcon} color={stylesVariables.color.icon.default} />
@@ -71,19 +73,19 @@ export class OfertaEmpleoScreen extends React.Component {
                                     </View>
                                     <View style={ofertaEmpleoStyles.item}>
                                         <Icon name="people" style={ofertaEmpleoStyles.itemIcon} color={stylesVariables.color.icon.default} />
-                                        <Text style={ofertaEmpleoStyles.itemLabel}>
+                                        <Text>
                                             Nº plazas: {ofertaEmpleo.slots}
                                         </Text>
                                     </View>
                                     <View style={ofertaEmpleoStyles.item}>
                                         <Icon name="work" style={ofertaEmpleoStyles.itemIcon} color={stylesVariables.color.icon.default} />
-                                        <Text style={ofertaEmpleoStyles.itemLabel}>
+                                        <Text>
                                             Tipo de contrato: {ofertaEmpleo.contract}
                                         </Text>
                                     </View>
                                     <View style={ofertaEmpleoStyles.item}>
                                         <Icon name="today" style={ofertaEmpleoStyles.itemIcon} color={stylesVariables.color.icon.default} />
-                                        <Text style={ofertaEmpleoStyles.itemLabel}>
+                                        <Text>
                                             {ofertaEmpleo.term}
                                         </Text>
                                     </View>
@@ -98,8 +100,8 @@ export class OfertaEmpleoScreen extends React.Component {
                             )
                         )
                     }
-                </View>
-            </View>
+                </ScrollView>
+            </View >
         );
     }
 }
