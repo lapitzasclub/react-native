@@ -65,7 +65,7 @@ export class OfertaEmpleoScreen extends React.Component {
                                 {this.state.ofertaEmpleoList.map((ofertaEmpleo, i) => (
                                     <Card containerStyle={ofertaEmpleoStyles.card} key={i}>
                                         <TouchableOpacity
-                                            onPress={() => this.props.navigation.navigate('SettingsScreen')}
+                                            onPress={() => this.props.navigation.navigate('OfertaEmpleoDetailScreen')}
                                             style={ofertaEmpleoStyles.touchable}>
                                             <View style={{ flexDirection: "row" }}>
                                                 <View style={ofertaEmpleoStyles.cardLeft}>

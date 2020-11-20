@@ -7,6 +7,7 @@ import { Publicacion } from './publicacion.model';
 import { publicacionStyles } from './publicacion-styles';
 import { Card, Icon } from 'react-native-elements';
 import moment from 'moment';
+import { parseClass4Navigation } from '../../screens/shared/utils';
 
 export class PublicacionScreen extends React.Component {
     constructor(props) {
@@ -76,7 +77,7 @@ export class PublicacionScreen extends React.Component {
                                 {this.state.publicacionList.map((publicacion, i) => (
                                     <Card containerStyle={publicacionStyles.card} key={i} key={i}>
                                         <TouchableOpacity
-                                            onPress={() => this.props.navigation.navigate('SettingsScreen')}
+                                            onPress={() => this.props.navigation.navigate('PublicacionDetailScreen', { publicacion: parseClass4Navigation(publicacion) })}
                                             style={publicacionStyles.touchable}>
                                             <View style={{ flexDirection: "row" }}>
                                                 <View style={publicacionStyles.cardLeft}>
