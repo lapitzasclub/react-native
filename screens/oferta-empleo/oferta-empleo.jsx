@@ -58,7 +58,7 @@ export class OfertaEmpleoScreen extends React.Component {
                 <IvapHeader navigationProps={this.props.navigation} />
                 <View style={styles.mainView} >
                     <ScrollView contentContainerStyle={styles.mainScrollView} >
-                        <Text style={styles.h2}>Empleo público</Text>
+                        <Text h2 style={styles.h2}>Empleo público</Text>
 
                         {this.state.ofertaEmpleoList && this.state.ofertaEmpleoList.length > 0 ? (
                             <View>
@@ -69,7 +69,7 @@ export class OfertaEmpleoScreen extends React.Component {
                                             style={ofertaEmpleoStyles.touchable}>
                                             <View style={{ flexDirection: "row" }}>
                                                 <View style={ofertaEmpleoStyles.cardLeft}>
-                                                    <Card.Title style={ofertaEmpleoStyles.title}>{ofertaEmpleo.title}</Card.Title>
+                                                    <Card.Title h3 h3Style={ofertaEmpleoStyles.title}>{ofertaEmpleo.title}</Card.Title>
                                                     <View style={ofertaEmpleoStyles.item}>
                                                         <Icon name="place" style={ofertaEmpleoStyles.itemIcon} color={stylesVariables.color.icon.default} />
                                                         <Link style={ofertaEmpleoStyles.itemLabel}>

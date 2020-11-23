@@ -58,7 +58,7 @@ export class OfertaEmpleoDetailScreen extends React.Component {
                 <IvapHeader navigationProps={this.props.navigation} />
                 <View style={styles.mainView} >
                     <ScrollView contentContainerStyle={styles.mainScrollView} >
-                        <Text style={styles.h2}>Detalle de la oferta</Text>
+                        <Text h2 style={styles.h2}>Detalle de la oferta</Text>
 
                     </ScrollView>
                 </View>

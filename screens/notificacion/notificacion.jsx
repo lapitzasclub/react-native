@@ -14,7 +14,7 @@ export class NotificacionScreen extends React.Component {
                 <IvapHeader navigationProps={this.props.navigation} />
                 <View style={styles.mainView} >
                     <ScrollView contentContainerStyle={styles.mainScrollView} >
-                        <Text style={styles.h2}>Notificaciones</Text>
+                        <Text h2 style={styles.h2}>Notificaciones</Text>
                     </ScrollView>
                 </View>
             </View>

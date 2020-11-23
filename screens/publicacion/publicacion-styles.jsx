@@ -26,13 +26,14 @@ export const publicacionStyles = StyleSheet.create({
     justifyContent: 'center'
   },
   date: {
+    fontFamily: 'Montserrat-SemiBold',
     color: '#8E8E8E',
-    fontWeight: 'bold',
     textTransform: 'uppercase',
     textAlign: "left",
     marginBottom: 10
   },
   title: {
+    fontFamily: 'Montserrat',
     color: stylesVariables.color.font.default,
   }
 });

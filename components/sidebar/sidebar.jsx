@@ -48,39 +48,39 @@ const CustomSidebarMenu = (props) => {
         <DrawerContentScrollView {...props}>
           {/* <DrawerItemList {...filteredProps} /> */}
           <DrawerItem
-            icon={() => <Icon size={20} color="#DD99B2" name="work" />}
+            icon={() => <Icon size={20} color="#DD99B2" name="work" style={sidebarStyles.icon} />}
             label="Empleo público"
             onPress={() => resetTo('OfertaEmpleoScreen')}
             activeTintColor='#FFF'
             inactiveTintColor='#FFECF8'
-            itemStyle={sidebarStyles.item}
+            labelStyle={sidebarStyles.item}
             focused={routeName.match(/^(OfertaEmpleoScreen|OfertaEmpleoDetailScreen)$/)}
           />
           <DrawerItem
-            icon={() => <Icon size={20} color="#DD99B2" name="bullhorn" type="material-community" />}
+            icon={() => <Icon size={20} color="#DD99B2" name="bullhorn" type="material-community" style={sidebarStyles.icon} />}
             label="Publicaciones"
             onPress={() => resetTo('PublicacionScreen')}
             activeTintColor='#FFF'
             inactiveTintColor='#FFECF8'
-            itemStyle={sidebarStyles.item}
+            labelStyle={sidebarStyles.item}
             focused={routeName.match(/^(PublicacionScreen|PublicacionDetailScreen)$/)}
           />
           <DrawerItem
-            icon={() => <Icon size={20} color="#DD99B2" name="notifications" />}
+            icon={() => <Icon size={20} color="#DD99B2" name="notifications" style={sidebarStyles.icon} />}
             label="Notificaciones"
             onPress={() => resetTo('NotificacionScreen')}
             activeTintColor='#FFF'
             inactiveTintColor='#FFECF8'
-            itemStyle={sidebarStyles.item}
+            labelStyle={sidebarStyles.item}
             focused={routeName.match(/^(NotificacionScreen)$/)}
           />
           <DrawerItem
-            icon={() => <Icon size={20} color="#DD99B2" name="settings" />}
+            icon={() => <Icon size={20} color="#DD99B2" name="settings" style={sidebarStyles.icon} />}
             label="Ajustes"
             onPress={() => resetTo('SettingsScreen')}
             activeTintColor='#FFF'
             inactiveTintColor='#FFECF8'
-            itemStyle={sidebarStyles.item}
+            labelStyle={sidebarStyles.item}
             focused={routeName.match(/^(SettingsScreen)$/)}
           />
         </DrawerContentScrollView>
@@ -108,7 +108,7 @@ export class IvapDrawer extends React.Component {
         drawerContentOptions={{
           activeTintColor: '#FFF',
           inactiveTintColor: '#FFECF8',
-          itemStyle: sidebarStyles.item
+          labelStyle: sidebarStyles.item
         }}
       >
         <Drawer.Screen

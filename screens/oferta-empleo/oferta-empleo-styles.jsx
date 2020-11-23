@@ -26,15 +26,16 @@ export const ofertaEmpleoStyles = StyleSheet.create({
     justifyContent: 'center'
   },
   title: {
+    fontFamily: 'Montserrat-SemiBold',
+    fontWeight: 'normal',
     color: stylesVariables.color.font.ivap,
-    fontSize: 20,
+    fontSize: 18,
     textTransform: 'uppercase',
     textAlign: "left"
   },
   item: {
     flexDirection: "row",
     flexWrap: 'nowrap',
-    color: stylesVariables.color.font.default,
     marginBottom: 15,
   },
   itemIcon: {
@@ -43,6 +44,8 @@ export const ofertaEmpleoStyles = StyleSheet.create({
   },
   itemLabel: {
     flex: 2,
-    marginRight: 5
+    marginRight: 5,
+    fontFamily: 'Montserrat',
+    color: stylesVariables.color.font.default
   },
 });

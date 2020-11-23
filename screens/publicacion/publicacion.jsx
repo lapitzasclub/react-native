@@ -19,44 +19,44 @@ export class PublicacionScreen extends React.Component {
             'La sede de Bilbao de la biblioteca del IVAP permanecerá cerrada del 13 al 24 de julio. Disculpen las molestias',
             new Date(),
             'BIBLIOTECA del IVAP / AREA DE DCOUMENTACIÓN',
-            '<p>Ya está disponible el boletín de junio sobre Recursos Humanos, donde se recopila información seleccionada en \
-            materia de Recursos Humanos: noticias, nueva bibliografía, novedades legislativas y formación prevista a corto \
-            plazo</p><p>En caso de estar interesado en recibir el boletín por correo electrónico, mande su solicitud a la \
-            siguiente dirección<br/><a mailto:"liburutegia@ivap.eus">liburutegia@ivap.eus</a></p><p>Para acceder al boletín \
-            siga el siguiente enlace: <a href="#">JUNIO 2020</a></p>'
+            '<p>Ya está disponible el boletín de junio sobre Recursos Humanos, donde se recopila información seleccionada en ' +
+            'materia de Recursos Humanos: noticias, nueva bibliografía, novedades legislativas y formación prevista a corto ' +
+            'plazo</p><p>En caso de estar interesado en recibir el boletín por correo electrónico, mande su solicitud a la ' +
+            'siguiente dirección<br/><a mailto:"liburutegia@ivap.eus">liburutegia@ivap.eus</a></p><p>Para acceder al boletín ' +
+            'siga el siguiente enlace: <a href="#">JUNIO 2020</a></p>'
         ))
         publicacionList.push(new Publicacion(
             2,
             'Boletín de junio sobre Recursos Humanos ya en la red',
             new Date(),
             'BIBLIOTECA del IVAP / AREA DE DCOUMENTACIÓN',
-            '<p>Ya está disponible el boletín de junio sobre Recursos Humanos, donde se recopila información seleccionada en \
-            materia de Recursos Humanos: noticias, nueva bibliografía, novedades legislativas y formación prevista a corto \
-            plazo</p><p>En caso de estar interesado en recibir el boletín por correo electrónico, mande su solicitud a la \
-            siguiente dirección<br/><a mailto:"liburutegia@ivap.eus">liburutegia@ivap.eus</a></p><p>Para acceder al boletín \
-            siga el siguiente enlace: <a href="#">JUNIO 2020</a></p>'
+            '<p>Ya está disponible el boletín de junio sobre Recursos Humanos, donde se recopila información seleccionada en ' +
+            'materia de Recursos Humanos: noticias, nueva bibliografía, novedades legislativas y formación prevista a corto ' +
+            'plazo</p><p>En caso de estar interesado en recibir el boletín por correo electrónico, mande su solicitud a la ' +
+            'siguiente dirección<br/><a mailto:"liburutegia@ivap.eus">liburutegia@ivap.eus</a></p><p>Para acceder al boletín ' +
+            'siga el siguiente enlace: <a href="#">JUNIO 2020</a></p>'
         ))
         publicacionList.push(new Publicacion(
             3,
             'Boletín de junio sobre Lenguas y Traducción ya en la red',
             new Date(),
             'BIBLIOTECA del IVAP / AREA DE DCOUMENTACIÓN',
-            '<p>Ya está disponible el boletín de junio sobre Recursos Humanos, donde se recopila información seleccionada en \
-            materia de Recursos Humanos: noticias, nueva bibliografía, novedades legislativas y formación prevista a corto \
-            plazo</p><p>En caso de estar interesado en recibir el boletín por correo electrónico, mande su solicitud a la \
-            siguiente dirección<br/><a mailto:"liburutegia@ivap.eus">liburutegia@ivap.eus</a></p><p>Para acceder al boletín \
-            siga el siguiente enlace: <a href="#">JUNIO 2020</a></p>'
+            '<p>Ya está disponible el boletín de junio sobre Recursos Humanos, donde se recopila información seleccionada en ' +
+            'materia de Recursos Humanos: noticias, nueva bibliografía, novedades legislativas y formación prevista a corto ' +
+            'plazo</p><p>En caso de estar interesado en recibir el boletín por correo electrónico, mande su solicitud a la ' +
+            'siguiente dirección<br/><a mailto:"liburutegia@ivap.eus">liburutegia@ivap.eus</a></p><p>Para acceder al boletín ' +
+            'siga el siguiente enlace: <a href="#">JUNIO 2020</a></p>'
         ))
         publicacionList.push(new Publicacion(
             4,
             'El IVAP ha publicado el libro La mediación escolar en el sistema educativo vasco no universitario',
             new Date(),
             'BIBLIOTECA del IVAP / AREA DE DCOUMENTACIÓN',
-            '<p>Ya está disponible el boletín de junio sobre Recursos Humanos, donde se recopila información seleccionada en \
-            materia de Recursos Humanos: noticias, nueva bibliografía, novedades legislativas y formación prevista a corto \
-            plazo</p><p>En caso de estar interesado en recibir el boletín por correo electrónico, mande su solicitud a la \
-            siguiente dirección<br/><a mailto:"liburutegia@ivap.eus">liburutegia@ivap.eus</a></p><p>Para acceder al boletín \
-            siga el siguiente enlace: <a href="#">JUNIO 2020</a></p>'
+            '<p>Ya está disponible el boletín de junio sobre Recursos Humanos, donde se recopila información seleccionada en ' +
+            'materia de Recursos Humanos: noticias, nueva bibliografía, novedades legislativas y formación prevista a corto ' +
+            'plazo</p><p>En caso de estar interesado en recibir el boletín por correo electrónico, mande su solicitud a la ' +
+            'siguiente dirección<br/><a mailto:"liburutegia@ivap.eus">liburutegia@ivap.eus</a></p><p>Para acceder al boletín ' +
+            'siga el siguiente enlace: <a href="#">JUNIO 2020</a></p>'
         ))
 
         this.state = {
@@ -70,7 +70,7 @@ export class PublicacionScreen extends React.Component {
                 <IvapHeader navigationProps={this.props.navigation} />
                 <View style={styles.mainView} >
                     <ScrollView contentContainerStyle={styles.mainScrollView} >
-                        <Text style={styles.h2}>Publicaciones</Text>
+                        <Text h2 style={styles.h2}>Publicaciones</Text>
 
                         {this.state.publicacionList && this.state.publicacionList.length > 0 ? (
                             <View>

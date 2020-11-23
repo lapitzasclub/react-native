@@ -10,8 +10,16 @@ export const sidebarStyles = StyleSheet.create({
     resizeMode: "cover",
     justifyContent: "center"
   },
+  icon: {
+    marginLeft: 15,
+    marginRight: 0,
+    padding: 0
+  },
   item: {
-    color: "#fff"
+    fontFamily: 'Montserrat-SemiBold',
+    fontSize: 15,
+    color: "#fff",
+    marginLeft: -15,
   },
   logo: {
     marginTop: 50,

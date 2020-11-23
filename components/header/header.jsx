@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, TouchableOpacity, View } from 'react-native';
+import { StatusBar, Text, TouchableOpacity, View } from 'react-native';
 import Icon from "react-native-vector-icons/Ionicons";
 import { Header } from 'react-native-elements';
 import { headerStyles } from './header-styles';
@@ -57,7 +57,7 @@ export class IvapHeader extends React.Component {
             <Header id="ivapHeader"
                 placement="left"
                 leftComponent={<NavigationDrawerButton navigationProps={this.props.navigationProps} />}
-                centerComponent={{ text: 'IVAP', style: headerStyles.centerComponent }}
+                centerComponent={<Text h1 style={headerStyles.centerComponent} >IVAP</Text>}
                 rightComponent={<NotificationsButton onPress={() => { this.props.navigationProps.navigate('NotificacionScreen'); }} />}
                 containerStyle={headerStyles.container}
             />

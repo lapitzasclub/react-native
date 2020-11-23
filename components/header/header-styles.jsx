@@ -14,9 +14,13 @@ export const headerStyles = StyleSheet.create({
     backgroundColor: stylesVariables.color.background.ivap,
     borderBottomColor: stylesVariables.color.background.ivap,
     margin: 0,
-    height: 70
+    height: 90,
   },
   centerComponent: {
-    color: "#fff"
+    fontFamily: 'Montserrat-Bold',
+    lineHeight: 27,
+    fontSize: 22,
+    color: "#fff",
+    marginLeft: 5
   },
 });
